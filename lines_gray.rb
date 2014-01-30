@@ -6,7 +6,8 @@ COL_W = SIDE_W/NUM_COLS.to_f
 def display_line idx 
   push_style
   if mouse_x > idx*COL_W && mouse_x < (idx+1)*COL_W
-    stroke 255,0,0
+    stroke_width 3
+    # stroke 255,0,0
   else
     mouse_dist = abs(mouse_x - (idx*COL_W + COL_W/2.0))
     gray = map mouse_dist, 0, width/2.0, 255, 0
